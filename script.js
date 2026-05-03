@@ -151,9 +151,14 @@ function placeHorses() {
     SUITS.forEach((suit, index) => {
         const colIndex = index + 1; // cols 1-4
         const horseObj = { suit, value: HORSE_VALUE };
-        const horseEl = createCardElement(horseObj);
+        const horseEl = document.createElement('div');
+        horseEl.classList.add('card');
         horseEl.classList.add('horse');
 
+        const img = document.createElement('img');
+        img.src = "Images/" + suit + ".jpeg";
+        
+        horseEl.appendChild(img);
         boardEl.appendChild(horseEl);
 
         horses[suit] = {

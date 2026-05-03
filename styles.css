@@ -224,3 +224,9 @@ h1 {
         font-size: 1.2rem;
     }
 }
+
+img{
+    width: 76px;
+    height: 128px;
+    border-radius: 6px;
+}
